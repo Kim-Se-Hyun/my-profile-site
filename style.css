@@ -1,0 +1,180 @@
+/* Premium & Lovely UI for Dachi Village Slime Shop */
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 3.5s cubic-bezier(0.36, 0, 0.64, 1) infinite;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scale-pop {
+    0% {
+        transform: scale(0.92);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scale-pop {
+    animation: scale-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium button styling */
+.link-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.link-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+    pointer-events: none;
+}
+
+.link-btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Neumorphic (Soft-UI) phone button styling */
+.phone-btn {
+    background: #fdf5f3;
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08),
+        0 2px 4px rgba(0, 0, 0, 0.04);
+    border: none;
+    cursor: pointer;
+}
+
+.phone-btn:hover {
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10),
+        0 3px 6px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.phone-btn:active {
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.06),
+        inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    transform: translateY(0);
+}
+
+/* SNS icon hover effect */
+.sns-icon-btn {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sns-icon-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Toast styling */
+#toast {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#toast.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .link-btn {
+        padding: 0.875rem 1rem !important;
+    }
+}
+
+/* Custom scrollbar - premium look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(244, 114, 182, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(244, 114, 182, 0.5);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Light shadow for depth */
+.shadow-xl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Hero image SVG polish */
+svg {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+}
